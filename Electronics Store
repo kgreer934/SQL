@@ -1,0 +1,24 @@
+CREATE TABLE electronics (id integer primary key, type text, condition text, color text, price integer);
+
+INSERT INTO electronics VALUES (1, 'tv', 'new', 'black', 40);
+INSERT INTO electronics VALUES (2, 'tv', 'used', 'black', 30);
+INSERT INTO electronics VALUES (3, 'iphone', 'new', 'purple', 100);
+INSERT INTO electronics VALUES (4, 'iphone', 'used', 'purple', 85);
+INSERT INTO electronics VALUES (5, 'iphone', 'new', 'white', 100);
+INSERT INTO electronics VALUES (6, 'iphone', 'used', 'white', 85);
+INSERT INTO electronics VALUES (7, 'android', 'new', 'black', 80);
+INSERT INTO electronics VALUES (8, 'android', 'used', 'black', 70);
+INSERT INTO electronics VALUES (9, 'ipad', 'new', 'grey', 90);
+INSERT INTO electronics VALUES (10, 'ipad', 'used', 'grey', 80);
+INSERT INTO electronics VALUES (11, 'laptop', 'new', 'black', 75);
+INSERT INTO electronics VALUES (12, 'laptop', 'used', 'black', 50);
+INSERT INTO electronics VALUES (13, 'speaker', 'new', 'black', 65);
+INSERT INTO electronics VALUES (14, 'cable', 'new', 'black', 5);
+INSERT INTO electronics VALUES (15, 'remote', 'new', 'black', 5);
+
+SELECT * FROM electronics
+ORDER BY price;
+
+SELECT *, MAX(price) FROM electronics
+WHERE condition = 'new'
+
